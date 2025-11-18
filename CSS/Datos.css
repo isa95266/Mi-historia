@@ -1,0 +1,189 @@
+header {
+  background-color: #8e0d0d;
+  color: white;
+  height: 110px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0px 8px 5px rgba(135, 9, 0, 0.296);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* ❌ quita el padding horizontal global */
+  padding: 0; 
+}
+
+/* 🔹 cada contenedor tendrá su propia separación de 20px */
+.logo-container {
+  margin-left: 20px;
+}
+
+.logo2-container {
+  margin-right: 20px;
+}
+
+/* contenedores iguales */
+.logo-container, .logo2-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+}
+
+/* círculos centrados */
+.circulo, .circulo2 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.circulo { background-color: rgb(48, 104, 152); }
+.circulo2 { background-color: rgb(175, 191, 0); }
+
+/* logos sobre sus círculos */
+.logo, .logo2 {
+  position: relative;
+  width: 50px;
+  height: auto;
+  z-index: 1;
+}
+
+/* título centrado */
+.titulo {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular',
+    'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  flex-grow: 1;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+ padding-top: 20px;
+}
+
+.titulo p{
+  font-size: 1rem; 
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: lighter;
+ font-size: clamp(12px, 3.5vw, 25px); /* se adapta a pantallas */
+}
+/* === CONTENIDO === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+   background: url("../img/fondo.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #fffffff4; /* 🔹 controlas qué tan oscuro */
+  z-index: -1; /* queda detrás del contenido */
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 170px auto 40px auto; /* 🔹 espacio para que el header no tape */
+}
+
+/* Sección perfil */
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+ 
+}
+
+.perfil img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #ed5454cc;
+  object-fit: cover;
+  border: 4px solid #8e0d0d;
+  box-shadow: inset 0px 0px 10px 9px rgb(91, 2, 2);
+  opacity: 90%;
+}
+
+.bio {
+  flex: 1;
+}
+
+h2 {
+  color: #8e0d0d;
+  border-bottom: 2px solid #8e0d0d;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: #f8d7da;
+  margin: 0.5rem 0;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+}
+
+.evolucion{
+ width: 100%;
+      max-width: 1000px;
+      background: #ffffff3d;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: center;  
+      align-items: center;
+     padding: 5%;
+      
+}
+
+.evolucion video{
+  
+    margin-left: 15%;
+    width: 69%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 89%; /* O ajusta según necesites */
+    object-fit: cover; /* o 'contain' */
+    box-shadow: 0px 5px 70px rgba(165, 57, 57, 0.629);
+    border-radius: 20px;
+    border: 10px;
+    border-style: groove;
+    border-color: #8e0d0d;
+ 
+    
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #8e0d0d;
+  color: white;
+  margin-top: 2rem;
+}
